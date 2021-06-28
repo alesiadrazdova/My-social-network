@@ -1,0 +1,19 @@
+.nav {
+    grid-area: nav;
+    background-color: #aaacff;background: rgb(219, 219, 255);
+    background: linear-gradient(173deg, #bebeff 35%, rgb(213, 213, 255) 100%);
+    padding: 60px 20px;
+  
+  }
+
+  .link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .link a.active {
+    color: rgb(58, 5, 107);
+    
+  }  

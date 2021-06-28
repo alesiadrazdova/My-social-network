@@ -1,0 +1,11 @@
+.header {
+    grid-area: header;
+    background: rgb(216, 216, 255);
+    background: linear-gradient(150deg, rgb(224, 224, 255) 35%, rgba(190,190,255,1) 100%);
+  
+  }
+  
+  .logo {
+    width: 60px;
+    margin: 0px 25px;
+  }
