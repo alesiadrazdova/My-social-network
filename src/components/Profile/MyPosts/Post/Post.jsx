@@ -2,6 +2,7 @@ import React from 'react';
 import './Post.css'
 
 const Post = (props) => {
+
     return(             
         <div className='post_item'>
               <img src='https://pbs.twimg.com/profile_images/914408737460367360/D_xX1T9D.jpg' className='avatar'/>

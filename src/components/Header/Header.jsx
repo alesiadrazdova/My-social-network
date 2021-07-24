@@ -1,10 +1,11 @@
 import React from 'react';
 import './Header.css'
+import logo from '../../assets/images/graphics.svg';
 
  const Header = () => {
     return (
         <header className='header'>
-        <img src='https://www.clipartmax.com/png/full/51-514301_be-like-a-hummingbird-colibri-silueta.png' alt='' className='logo'/>
+        <img src={logo} alt=' ' className='logo'/>
       </header>
     )
 }

@@ -1,3 +1,11 @@
 .post_item {
   color: blue;
 }
+
+.posts-block {
+  padding: 15px;
+}
+
+.posts {
+  margin-top: 15px;
+}
