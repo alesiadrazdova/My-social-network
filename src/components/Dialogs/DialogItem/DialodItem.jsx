@@ -7,8 +7,8 @@ import { NavLink } from 'react-router-dom';
 const DialogItem = ({name, id}) => {
  
   return(
-    <div className='dialog'>
-           <NavLink to={`dialog/${id}`}> {name} </NavLink>
+    <div className='dialogs'>
+           <NavLink to={`dialogs/${id}`}> {name} </NavLink>
            
     </div>
       )

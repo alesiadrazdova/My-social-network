@@ -1,16 +1,16 @@
 import React from 'react';
 import './Profile.css';
-import MyPosts from './MyPosts/MyPosts';
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
-  
+
     return(
       <div>
           <ProfileInfo/>        
-            <MyPosts posts={props.profilePage.posts} newPostText = {props.profilePage.newPostText} updataNewPostText={props.updataNewPostText} addPost={props.addPost}/>                
+          <MyPostsContainer store={props.store} />
       </div>
     )
 }
 
-export default Profile
+export default Profile;
