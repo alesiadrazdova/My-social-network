@@ -24,16 +24,20 @@ const Dialogs = (props) => {
   }
 
   return (
-    <div className='dialogs'>
-      <div className='dialog-items'>
-        {dialogsElem}
+    <>
+      <div className='dialogs'>
+        <div className='dialog-items'>
+          {dialogsElem}
+        </div>
+        <div className='messages'>
+          {messagesElem}
+        </div>
       </div>
-      <div className='messages'>
-        {messagesElem}
-      </div>
-      <textarea value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
-      <button onClick={onMessageClick}> Add</button>
-    </div>
+      <div className='txt'>
+        <textarea className='txt-area' value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
+      <button onClick={onMessageClick} className='btn-txt'> Add</button>
+      </div>      
+    </>
 
   )
 
