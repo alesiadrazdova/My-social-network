@@ -10,3 +10,13 @@
 .like {
     width: 25px;
 }
+
+.post-item-wrapper {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.post-item {
+    margin: 15px;
+}

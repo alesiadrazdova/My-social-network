@@ -1,7 +1,9 @@
 .nav {
     grid-area: nav;
-    background-color: #aaacff;background: rgb(219, 219, 255);
-    background: linear-gradient(173deg, #bebeff 35%, rgb(213, 213, 255) 100%);
+    background: #6A3783;
+    border-radius: 10px;
+    /* background-color: #aaacff;background: rgb(219, 219, 255);
+    background: linear-gradient(173deg, #bebeff 35%, rgb(213, 213, 255) 100%); */
     padding: 60px 20px;
   
   }
@@ -14,5 +16,5 @@
   }
 
   .link a.active {
-    color: rgb(58, 5, 107);    
+    color: rgb(90, 148, 255);    
   }  

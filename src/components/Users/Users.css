@@ -3,4 +3,27 @@
   width: 80px;
   height: 80px;
   border-radius: 50px;
+  margin: 12px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.users-wrapper {
+  margin: 30px;
+}
+
+.user {
+  margin: 15px;
+}
+
+.user-data {
+  display: block;
+  width: 110px;
+}
+
+.btn-follow {
+  background: #6a3783;
+  color: #ffffff;
 }
