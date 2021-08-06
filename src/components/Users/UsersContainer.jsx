@@ -1,11 +1,12 @@
-import Users from './Users';
+import UsersApiComponent from './Users';
 import { connect } from 'react-redux';
 import { followAC, setUsersAC, unfollowAC } from '../../redux/usersReducer';
 
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users
+        users: state.usersPage.users,
+        pageSize: state.usersPage.pageSize
     }
 };
 
@@ -23,4 +24,4 @@ let mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Users);
+export default connect(mapStateToProps, mapDispatchToProps)(UsersApiComponent);
