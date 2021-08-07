@@ -19,8 +19,7 @@ const Dialogs = (props) => {
   }
 
   let onNewMesageChange = (event) => {
-    let body = event.target.value;
-    props.updateNewMessageBodyCreator(body)
+    props.updateNewMessageBodyCreator(event.target.value)
   }
 
   return (

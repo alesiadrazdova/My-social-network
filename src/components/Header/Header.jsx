@@ -9,9 +9,9 @@ const Header = () => {
   return (
     <header className='header'>
       <Link to={'/'} style={{ textDecoration: 'none' }}>
-      <div>
+      <div className='logo-wrapper'>
         <img src={logo} alt=' ' className='logo' />
-        <span className='text-logo'>Cosmos</span>
+        <div className='text-logo'>Universe</div>
       </div>
       </Link>
     </header>
