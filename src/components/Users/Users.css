@@ -6,8 +6,19 @@
   margin: 12px;
 }
 
+.pagination-wrapper {
+  font-size: 18px;
+  color: blue;
+  cursor: pointer;
+}
+
+.pagination-wrapper span {
+  margin: 0 10px;
+}
+
 .bold {
   font-weight: bold;
+  font-size: 24px;
 }
 
 .users-wrapper {

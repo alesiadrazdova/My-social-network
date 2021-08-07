@@ -3,16 +3,28 @@
     background: #6A3783;
     border-radius: 10px;  
   }
+
+   .logo-wrapper {
+    display: block;
+    position: relative;
+  }
   
   .logo {
     width: 60px;
-    margin: 15px 5px 0 25px;
+    margin: 15px 15px 0 25px;
   }
 
   .text-logo {
+    position: absolute;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 28px;
+    font-size: 20px;
     color: #ffffff;
-    font-weight: 400;
+    font-weight: 500;
+    left: 90px;
+    top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+
   }
-  
+
+ 
