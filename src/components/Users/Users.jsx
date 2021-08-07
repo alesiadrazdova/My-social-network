@@ -32,8 +32,8 @@ class Users extends Component {
             pages.push(i);
         }
 
-        let pagesPagination = pages.map((p) => {
-            return <span onClick={() => { this.pageChangeHandler(p) }} key={this.props.id} className={this.props.currentPage === p ? 'bold' : undefined }>{p}</span>
+        let pagesPagination = pages.map((p, id) => {
+            return <span onClick={() => { this.pageChangeHandler(p) }}  key={`P + ${id}`} className={this.props.currentPage === p ? 'bold' : undefined }>{p}</span>
         })
 
 
@@ -54,7 +54,7 @@ class Users extends Component {
                                     {user.followed ?
                                         <Button variant="contained" style={{ width: 110 }} color="inherit"
                                             onClick={() => { this.props.unfollow(user.id) }}>Unfollow</Button>
-                                        : <Button Button variant="contained" style={{ background: '#0a37aa', color: '#ffffff', width: 110 }}
+                                        : <Button variant="contained" style={{ background: '#0a37aa', color: '#ffffff', width: 110 }}
                                             onClick={() => { this.props.follow(user.id) }}>Follow</Button>}
                                 </div>
                             </div>
