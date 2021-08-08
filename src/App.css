@@ -1,0 +1,17 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav cont cont";
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.wrapper-content {
+  grid-area: cont;
+  background: #ffffff;
+  border-radius: 10px;
+}

@@ -1,0 +1,40 @@
+.dialog-wrapper {
+    margin: 20px;
+}
+
+button {
+    border-color: none;
+    border-image: none;
+    border-style: none;
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialog-items .active {
+    color: rgb(248, 37, 0);
+}
+
+.dialog-items a {
+    text-decoration: none;
+}
+
+/* .btn-txt {
+    font-size: 18px;
+    width: 180px;
+    height: 40px;
+    background: #6a3783;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin: 10px 20px;
+} */
+
+.txt-area {
+    display: block;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 20px;
+}

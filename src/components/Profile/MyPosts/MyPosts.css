@@ -1,0 +1,33 @@
+.post_item {
+  color: #ffffff;
+}
+
+.posts-block {
+  padding: 15px;
+  background: #6a3783;
+  border-radius: 10px;
+}
+
+.posts {
+  margin-top: 15px;
+}
+
+.txt-post {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.btn-txt-my-posts {
+
+  margin-left: 10px;
+  outline: none;
+  margin: 10px 20px;
+}
+
+.txt-area-my-posts {
+  display: block;
+  width: 500px;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
