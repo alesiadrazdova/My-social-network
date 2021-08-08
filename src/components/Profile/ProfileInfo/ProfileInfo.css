@@ -1,12 +1,49 @@
+.description-user-block {
+  display: grid;
+  grid-template-columns: 3fr 10fr;
+  padding: 15px;
+  border-radius: 10px;
+}
+
 .description-block {
-    padding: 15px;
-    background: #ffffff;
-    border-radius: 10px;
+  margin: 20px 0;
 }
 
 .user-avatar {
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+}
+
+.full-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+
+}
+
+.status-user {
+  color: rgb(151, 151, 151);
+}
+
+.search-job {
+  display: flex;
+  align-items: center;
+}
+
+.social {
+  width: 18px;
+  padding: 6px;
+  margin-top: 15px;
+  margin-right: 20px;
 }
