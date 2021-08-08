@@ -2,6 +2,7 @@ import React from "react";
 import './Dialogs.css';
 import DialogItem from "./DialogItem/DialodItem";
 import Message from "./Messages/Messages";
+import { Button } from "@material-ui/core";
 
 const Dialogs = (props) => {
 
@@ -23,7 +24,7 @@ const Dialogs = (props) => {
   }
 
   return (
-    <>
+    <div className='dialog-wrapper'>
       <div className='dialogs'>
         <div className='dialog-items'>
           {dialogsElem}
@@ -34,9 +35,9 @@ const Dialogs = (props) => {
       </div>
       <div className='txt'>
         <textarea className='txt-area' value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
-      <button onClick={onMessageClick} className='btn-txt'> Add</button>
+      <Button variant="contained" color='primary' style={{ width: 110 }} onClick={onMessageClick} className='btn-txt'> Add</Button>
       </div>      
-    </>
+    </div>
 
   )
 

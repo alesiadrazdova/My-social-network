@@ -18,12 +18,7 @@
 }
 
 .btn-txt-my-posts {
-  font-size: 18px;
-  width: 180px;
-  height: 40px;
-  background: #f5ff9a;
-  color: #6A3783;
-  border-radius: 5px;
+
   margin-left: 10px;
   outline: none;
   margin: 10px 20px;
@@ -33,5 +28,6 @@
   display: block;
   width: 500px;
   height: 100px;
-  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }

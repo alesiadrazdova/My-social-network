@@ -35,9 +35,9 @@ const Users = (props) => {
                             
                             <div>
                                 {user.followed ?
-                                    <Button variant="contained" style={{ width: 110 }} color="inherit"
+                                    <Button variant='contained' color='inherit' style={{ width: 110 }}
                                         onClick={() => { props.unfollow(user.id) }}>Unfollow</Button>
-                                    : <Button variant="contained" style={{ background: '#0a37aa', color: '#ffffff', width: 110 }}
+                                    : <Button variant='contained' color='primary' style={{ width: 110 }}
                                         onClick={() => { props.follow(user.id) }}>Follow</Button>}
                             </div>
                         </div>

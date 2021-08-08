@@ -1,3 +1,7 @@
+.dialog-wrapper {
+    margin: 20px;
+}
+
 button {
     border-color: none;
     border-image: none;
@@ -7,7 +11,6 @@ button {
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
-    margin: 10px 20px;
 }
 
 .dialog-items .active {
@@ -18,7 +21,7 @@ button {
     text-decoration: none;
 }
 
-.btn-txt {
+/* .btn-txt {
     font-size: 18px;
     width: 180px;
     height: 40px;
@@ -27,11 +30,11 @@ button {
     border-radius: 5px;
     margin-left: 10px;
     margin: 10px 20px;
-}
+} */
 
 .txt-area {
     display: block;
     width: 500px;
     height: 100px;
-    margin-left: 20px;
+    margin-bottom: 20px;
 }
