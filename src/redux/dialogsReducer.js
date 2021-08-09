@@ -29,7 +29,6 @@ let initialState = {
     newMessageBody: ''
 };
 
-
 const dialogsReduser = (state = initialState, action) => {
     
     switch (action.type) {
@@ -46,12 +45,12 @@ const dialogsReduser = (state = initialState, action) => {
             };        
         default:
             return state;
-    }
-}
+    };
+};
 
 export const sendMessageCreator = () => ({ type: SEND_MESSAGE })
 export const updateNewMessageBodyCreator = (body) => (
     { type: UPDATE_NEW_MESSAGE_BODY, newText: body }
-)
+);
 
 export default dialogsReduser;

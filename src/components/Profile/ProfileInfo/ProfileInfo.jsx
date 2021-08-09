@@ -13,7 +13,8 @@ import './ProfileInfo.css';
 const ProfileInfo = (props) => {
   if (!props.profile) {
     return <Preloader />
-  }
+  };
+
   return (
     <div className='profile-info-wrapper'>
       <div>
@@ -54,11 +55,9 @@ const ProfileInfo = (props) => {
               </div> : null}
           </>
         </div>
-        AVA + description
       </div>
     </div>
-  )
+  );
+};
 
-}
-
-export default ProfileInfo
+export default ProfileInfo;
