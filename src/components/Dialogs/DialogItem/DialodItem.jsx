@@ -1,17 +1,14 @@
-import React from "react";
-import './DialogItem.css';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './DialogItem.css';
 
+const DialogItem = ({ name, id }) => {
 
-
-const DialogItem = ({name, id}) => {
- 
-  return(
+  return (
     <div className='dialogs'>
-           <NavLink to={`dialogs/${id}`}> {name} </NavLink>
-           
+      <NavLink to={`dialogs/${id}`}> {name} </NavLink>
     </div>
-      )
-}
+  );
+};
 
-export default DialogItem
+export default DialogItem;

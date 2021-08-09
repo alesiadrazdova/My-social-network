@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { followAC, setUsersAC, unfollowAC, setCurrentPageAC, setUsersTotalCountAC, toggleIsFetchingAC } from '../../redux/usersReducer';
 import axios from 'axios';
 import { Preloader } from '../common/preloader/preloader';
-
 class UsersContainer extends Component {
 
     componentDidMount = () => {
@@ -24,7 +23,7 @@ class UsersContainer extends Component {
             .then((response) => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
-            })
+            });
     };
 
     render() {
@@ -39,14 +38,10 @@ class UsersContainer extends Component {
                     totalUsersCount={this.props.totalUsersCount}
                     pageSize={this.props.pageSize}
                     pageChangeHandler={this.pageChangeHandler} />}
-
-
             </>
         );
-    }
-
+    };
 };
-
 
 let mapStateToProps = (state) => {
     return {
@@ -55,41 +50,14 @@ let mapStateToProps = (state) => {
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
         isFetching: state.usersPage.isFetching
-    }
+    };
 };
 
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followAC(userId));
-//         },
-//         unfollow: (userId) => {
-//             dispatch(unfollowAC(userId));
-//         },
-//         setUsers: (users) => {
-//             dispatch(setUsersAC(users));
-//         },
-//         setCurrentPage: (pageNumber) => {
-//             dispatch(setCurrentPageAC(pageNumber));
-//         },
-//         setTotalUsersCount: (totalCount) => {
-//             dispatch(setUsersTotalCountAC(totalCount));
-//         },
-//         toggleIsFetching: (isFetching) => {
-//             dispatch(toggleIsFetchingAC(isFetching));
-//         },
-
-//     }
-// };
 export default connect(mapStateToProps, {
-        follow: followAC,
-        unfollow: unfollowAC,
-        setUsers: setUsersAC,
-        setCurrentPage: setCurrentPageAC,
-        setTotalUsersCount: setUsersTotalCountAC,
-        toggleIsFetching: toggleIsFetchingAC,
-        
-
-    })(UsersContainer);
-
-
+    follow: followAC,
+    unfollow: unfollowAC,
+    setUsers: setUsersAC,
+    setCurrentPage: setCurrentPageAC,
+    setTotalUsersCount: setUsersTotalCountAC,
+    toggleIsFetching: toggleIsFetchingAC,
+})(UsersContainer);

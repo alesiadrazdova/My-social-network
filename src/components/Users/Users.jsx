@@ -1,21 +1,22 @@
 import { Button, Divider } from '@material-ui/core';
 import React from 'react';
-import './Users.css';
 import userPhoto from '../../assets/images/avatar.png';
 import { NavLink } from 'react-router-dom';
+import './Users.css';
 
 const Users = (props) => {
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+
+    // let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
 
-    for (let i = 1; i <= pagesCount; i++) {
+    for (let i = 1; i <= 25; i++) {
         pages.push(i);
-    }
+    };
 
     let pagesPagination = pages.map((p, id) => {
         return <span onClick={() => { props.pageChangeHandler(p) }} key={`P + ${id}`} className={props.currentPage === p ? 'bold' : undefined}>{p}</span>
-    })
+    });
 
     return (
         <div className='users-wrapper'>
@@ -26,13 +27,12 @@ const Users = (props) => {
                 <div key={user.id} className='user'>
                     <div className='user-data'>
                         <div>
-                            <NavLink to={ `/profile/${user.id}` }>
-                               <div>
-                                <img src={user.photos.small === null ? userPhoto : user.photos.small} alt='user'
-                                    className='users-photo' />
-                            </div> 
+                            <NavLink to={`/profile/${user.id}`}>
+                                <div>
+                                    <img src={user.photos.small === null ? userPhoto : user.photos.small} alt='user'
+                                        className='users-photo' />
+                                </div>
                             </NavLink>
-                            
                             <div>
                                 {user.followed ?
                                     <Button variant='contained' color='inherit' style={{ width: 110 }}
@@ -44,9 +44,7 @@ const Users = (props) => {
                     </div>
                     <div>{user.name}</div>
                     <div>{user.status}</div>
-                    {/* <div>{user.location.city}, {user.location.country}</div> */}
-
-                    <Divider style={{ listStyleType: 'none', margin: 10 }} variant="middle" component="li" />
+                    <Divider style={{ listStyleType: 'none', margin: 10 }} variant='middle' component='li' />
                 </div>)
             }
             <div className='pagination-wrapper'>
@@ -54,8 +52,6 @@ const Users = (props) => {
             </div>
         </div>
     );
-}
-
-
+};
 
 export default Users;
