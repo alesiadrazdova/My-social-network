@@ -54,7 +54,6 @@ const ProfileInfo = (props) => {
               </div> : null}
           </>
         </div>
-        AVA + description
       </div>
     </div>
   )
