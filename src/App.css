@@ -1,5 +1,5 @@
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-areas:
@@ -14,4 +14,10 @@
   grid-area: cont;
   background: #ffffff;
   border-radius: 10px;
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+    grid-template-columns: 100px 10fr;
+  }
 }

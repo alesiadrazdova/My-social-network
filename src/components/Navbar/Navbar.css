@@ -15,3 +15,14 @@
 .link a.active {
   color: rgb(90, 148, 255);
 }
+
+@media (max-width: 680px) {
+  .nav {
+    padding: 20px 10px;
+  }
+
+  .link a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}

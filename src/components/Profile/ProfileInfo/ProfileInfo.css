@@ -23,6 +23,7 @@
   margin: 0 auto;
   outline: 4px solid #fff;
   outline-offset: -4px;
+  object-fit: cover;
 }
 
 .full-name {
@@ -46,4 +47,19 @@
   padding: 6px;
   margin-top: 15px;
   margin-right: 20px;
+}
+
+@media (max-width: 680px) {
+  .user-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .full-name {
+    font-size: 18px;
+  }
+
+  .description-block {
+    margin-left: 15px;
+  }
 }

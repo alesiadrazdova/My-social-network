@@ -34,7 +34,7 @@ const Dialogs = (props) => {
         </div>
       </div>
       <div className='txt'>
-        <textarea className='txt-area' value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
+        <textarea className='txt-area-dialogs' value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
       <Button variant="contained" color='primary' style={{ width: 110 }} onClick={onMessageClick} className='btn-txt'> Add</Button>
       </div>      
     </div>
