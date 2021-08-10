@@ -13,7 +13,8 @@ import './ProfileInfo.css';
 const ProfileInfo = (props) => {
   if (!props.profile) {
     return <Preloader />
-  }
+  };
+
   return (
     <div className='profile-info-wrapper'>
       <div>
@@ -56,8 +57,7 @@ const ProfileInfo = (props) => {
         </div>
       </div>
     </div>
-  )
+  );
+};
 
-}
-
-export default ProfileInfo
+export default ProfileInfo;

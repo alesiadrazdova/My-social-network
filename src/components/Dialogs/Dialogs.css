@@ -21,20 +21,16 @@ button {
   text-decoration: none;
 }
 
-/* .btn-txt {
-    font-size: 18px;
-    width: 180px;
-    height: 40px;
-    background: #6a3783;
-    color: #ffffff;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin: 10px 20px;
-} */
-
-.txt-area {
+.txt-area-dialogs {
   display: block;
   width: 500px;
   height: 100px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 680px) {
+  .txt-area-dialogs {
+    width: 100%;
+    height: 50px;
+  }
 }

@@ -18,7 +18,6 @@
 }
 
 .btn-txt-my-posts {
-
   margin-left: 10px;
   outline: none;
   margin: 10px 20px;
@@ -26,8 +25,15 @@
 
 .txt-area-my-posts {
   display: block;
-  width: 500px;
+  width: 450px;
   height: 100px;
   margin-bottom: 20px;
   border-radius: 5px;
+}
+
+@media (max-width: 680px) {
+  .txt-area-my-posts {
+    width: 100%;
+    height: 50px;
+  }
 }

@@ -1,14 +1,14 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
-import './MyPosts.css';
 import Post from './Post/Post';
+import './MyPosts.css';
 
 const MyPosts = (props) => {
 
     let postsElem = props.posts.map(post =>
         <Post key={post.id} message={post.message} likesCount={post.likesCount} />);
 
-    let newPostElem = React.createRef()
+    let newPostElem = React.createRef();
 
     let onAddPost = () => {
         props.addPost();
@@ -32,8 +32,7 @@ const MyPosts = (props) => {
                 {postsElem}
             </div>
         </div>
-    )
-
-}
+    );
+};
 
 export default MyPosts;

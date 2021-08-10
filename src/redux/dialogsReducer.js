@@ -29,7 +29,6 @@ let initialState = {
   newMessageBody: ''
 };
 
-
 const dialogsReduser = (state = initialState, action) => {
 
   switch (action.type) {

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
+import DialogItem from './DialogItem/DialodItem';
+import Message from './Messages/Messages';
+import { Button } from '@material-ui/core';
 import './Dialogs.css';
-import DialogItem from "./DialogItem/DialodItem";
-import Message from "./Messages/Messages";
-import { Button } from "@material-ui/core";
 
 const Dialogs = (props) => {
 
@@ -17,11 +17,11 @@ const Dialogs = (props) => {
 
   let onMessageClick = () => {
     props.sendMessage();
-  }
+  };
 
   let onNewMesageChange = (event) => {
-    props.updateNewMessageBodyCreator(event.target.value)
-  }
+    props.updateNewMessageBody(event.target.value);
+  };
 
   return (
     <div className='dialog-wrapper'>
@@ -34,13 +34,11 @@ const Dialogs = (props) => {
         </div>
       </div>
       <div className='txt'>
-        <textarea className='txt-area' value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
+        <textarea className='txt-area-dialogs' value={newMessageBody} onChange={onNewMesageChange} placeholder='Enter your message'></textarea>
       <Button variant="contained" color='primary' style={{ width: 110 }} onClick={onMessageClick} className='btn-txt'> Add</Button>
       </div>      
     </div>
-
-  )
-
-}
+  );
+};
 
 export default Dialogs;
