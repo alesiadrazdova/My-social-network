@@ -36,8 +36,9 @@ const Users = (props) => {
                             </NavLink>
                             <div>
                                 {user.followed ?
-                                    <Button variant='contained' color='inherit' style={{ width: 110 }}
+                                    <Button disabled={props.followingInProgress.some(id => id === user.id)} variant='contained' color='inherit' style={{ width: 110 }}
                                         onClick={() => {
+                                            props.toggleFollowingProgress(true, user.id);
                                             axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
                                                 withCredentials: true,
                                                 headers: { 'API-KEY': '3ca9781b-9298-496d-82f4-e13184811f7e' }
@@ -46,10 +47,12 @@ const Users = (props) => {
                                                     if (response.data.resultCode === 0) {
                                                         props.unfollow(user.id);
                                                     }
+                                                    props.toggleFollowingProgress(false, user.id);
                                                 });
                                         }}>Unfollow</Button>
-                                    : <Button variant='contained' color='primary' style={{ width: 110 }}
+                                    : <Button disabled={props.followingInProgress.some(id => id === user.id)} variant='contained' color='primary' style={{ width: 110 }}
                                         onClick={() => {
+                                            props.toggleFollowingProgress(true, user.id);
                                             axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
                                                 withCredentials: true,
                                                 headers: { 'API-KEY': '3ca9781b-9298-496d-82f4-e13184811f7e' }
@@ -58,6 +61,7 @@ const Users = (props) => {
                                                     if (response.data.resultCode === 0) {
                                                         props.follow(user.id);
                                                     }
+                                                    props.toggleFollowingProgress(false, user.id);
                                                 });
                                         }}>Follow</Button>}
                             </div>
