@@ -1,8 +1,9 @@
 import { Button, Divider } from '@material-ui/core';
 import React from 'react';
+import './Users.css';
 import userPhoto from '../../assets/images/avatar.png';
 import { NavLink } from 'react-router-dom';
-import './Users.css';
+import axios from 'axios';
 
 const Users = (props) => {
 
@@ -12,11 +13,11 @@ const Users = (props) => {
 
     for (let i = 1; i <= 25; i++) {
         pages.push(i);
-    };
+    }
 
     let pagesPagination = pages.map((p, id) => {
         return <span onClick={() => { props.pageChangeHandler(p) }} key={`P + ${id}`} className={props.currentPage === p ? 'bold' : undefined}>{p}</span>
-    });
+    })
 
     return (
         <div className='users-wrapper'>
@@ -36,15 +37,35 @@ const Users = (props) => {
                             <div>
                                 {user.followed ?
                                     <Button variant='contained' color='inherit' style={{ width: 110 }}
-                                        onClick={() => { props.unfollow(user.id) }}>Unfollow</Button>
+                                        onClick={() => {
+                                            axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
+                                                withCredentials: true,
+                                                headers: { 'API-KEY': '3ca9781b-9298-496d-82f4-e13184811f7e' }
+                                            })
+                                                .then((response) => {
+                                                    if (response.data.resultCode === 0) {
+                                                    props.unfollow(user.id);
+                                                    }
+                                                });
+                                        }}>Unfollow</Button>
                                     : <Button variant='contained' color='primary' style={{ width: 110 }}
-                                        onClick={() => { props.follow(user.id) }}>Follow</Button>}
+                                        onClick={() => {
+                                            axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
+                                                withCredentials: true,
+                                                headers: { 'API-KEY': '3ca9781b-9298-496d-82f4-e13184811f7e' }
+                                            })
+                                                .then((response) => {
+                                                    if (response.data.resultCode === 0) {
+                                                        props.follow(user.id);
+                                                    }                                                  
+                                                });
+                                        }}>Follow</Button>}
                             </div>
                         </div>
                     </div>
                     <div>{user.name}</div>
                     <div>{user.status}</div>
-                    <Divider style={{ listStyleType: 'none', margin: 10 }} variant='middle' component='li' />
+                    <Divider style={{ listStyleType: 'none', margin: 10 }} variant="middle" component="li" />
                 </div>)
             }
             <div className='pagination-wrapper'>
@@ -52,6 +73,6 @@ const Users = (props) => {
             </div>
         </div>
     );
-};
+}
 
 export default Users;
