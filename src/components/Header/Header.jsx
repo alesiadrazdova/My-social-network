@@ -4,7 +4,7 @@ import logo from '../../assets/images/graphics.svg';
 import { Link, NavLink } from 'react-router-dom';
 
 
-const Header = () => {
+const Header = (props) => {
 
   return (
     <header className='header'>
@@ -15,7 +15,8 @@ const Header = () => {
       </div>
       </Link>
       <div className='login-block'>
-        <NavLink to={'/login'}>Login</NavLink>
+        { props.isAuth ? props.isAuth : <NavLink to={'/login'}>Login</NavLink> }
+        
       </div>
     </header>
   )
